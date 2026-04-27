@@ -4,15 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>CSS Exercise 02 - Form</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Exercise 02 - Form</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
-    <main>
-      <!-- Start with the code from the HTML folder.
-      - Make sure to fix any issues in your HTML code.
-      - Delete all mentions of <br>s and style the line breaks with CSS. 
-      - Add classes to style the elements on the page. -->
+  <body class="color-blue">
+    <main class="form-container">
+      <!-- Add your code here -->
+      <form class="ira-form" method="post" action="/submitquestion">
+        <h1>Roth IRA Calculator</h1>
+        <div class="form-element">
+          <label class="form-label" for="name">Balance ($)</label>
+          <input type="text" id="balance" name="balance" />
+        </div>
+        
+        <div class="form-element">
+          <label class="form-label" for="name">Annual contribution (4)</label>
+          <input type="text" id="contribution" name="contribution" />
+        </div>
+        
+        <fieldset>
+          <legend>Maximum contributions?</legend>
+          <input type="radio" id="yes" name="contributions" value="yes" />
+          <label class="form-label" for="yes">Yes</label>
+          <input type="radio" id="no" name="contributions" value="no" />
+          <label class="form-label" for="no">No</label>
+        </fieldset>
+        
+        <div class="form-element">
+          <label class="form-label" for="rate of return">Expected rate of return (5)</label>
+          <input type="number" id="rate of return" name="rate of return"/>
+        </div>
+        
+        <div class="form-element">
+          <label class="form-label" for="current age">Current age</label>
+          <input type="number" id="current age" name="current age"/>
+        </div>
+        
+        <div class="form-element">
+          <label class="form-label" for="retirement age">Retirement age</label>
+          <input type="number" id="retirement age" name="retirement age"/>
+        </div>
+        
+        <div class="form-element">
+          <label class="form-label" for="marginal tax rate">Marginal tax rate(%)</label>
+          <input type="number" id="marginal tax rate" name="marginal tax rate"/>
+        </div>
+        
+        <div class="form-element">
+          <button>Calculate</button>
+          <input type="reset" value="Reset Form" />
+        </div>
+        <p>This exercise is a simplified version of the Roth IRA Calculator at <a href="Calculator.net">Calculator.net</a></p>
     </main>
   </body>
 </html>
